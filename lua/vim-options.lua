@@ -6,7 +6,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set nowrap")
--- This is macOS and Windows specfic, for linux -> unnamedplus
+-- This is macOS and Windows specific, for linux -> unnamedplus
 vim.cmd("set clipboard=unnamed")
 vim.lsp.set_log_level("debug")
 
