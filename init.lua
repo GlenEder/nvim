@@ -19,4 +19,3 @@ require("vim-options")
 -- load lazy.vim plugins 
 require("lazy").setup("plugins")
 
-
