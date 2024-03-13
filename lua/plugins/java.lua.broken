@@ -1,0 +1,23 @@
+return {
+  'mfussenegger/nvim-jdtls',
+  config = function ()
+    local workspacedir = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+    require('jdtls').start_or_attach({
+      cmd = {
+        '/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java',
+          '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+          '-Dosgi.bundles.defaultStartLevel=4',
+          '-Declipse.product=org.eclipse.jdt.ls.core.product',
+          '-Dlog.level=ALL',
+          '-Xmx1G',
+          '-jar', '/Users/gleneder/devroot/eclipse_jdtls/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar',
+          '-configuration /Users/gleneder/devroot/eclipse_jdtls/config_mac_arm',
+          '-data', vim.fn.expand('~.cache/jdtls-workspace') .. workspacedir,
+      },
+      root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+    })
+  end
+}
+
+
+
