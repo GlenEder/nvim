@@ -11,26 +11,26 @@ return {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
   },
-  config = function ()
+  config = function()
     require("mason").setup()
     require("mason-lspconfig").setup({
-      -- list of lsps to have intstalled by default 
+      -- list of lsps to have intstalled by default
       ensure_installed = {
         "lua_ls",
         "bashls",
       },
-      -- define default handler setup method so that the lsps load 
+      -- define default handler setup method so that the lsps load
       handlers = {
         -- The first entry (without a key) will be the default handler
         -- and will be called for each installed server that doesn"t have
         -- a dedicated handler.
-        function (server_name) -- default handler (optional)
+        function(server_name)  -- default handler (optional)
           require("lspconfig")[server_name].setup {}
         end,
       },
     })
 
-    -- setup cmp 
+    -- setup cmp
     local cmp = require("cmp")
     cmp.setup({
       snippet = {
@@ -57,10 +57,9 @@ return {
       })
     })
 
-    -- setup diagnostics 
+    -- setup diagnostics
     vim.diagnostic.config({
       virtual_text = true
     })
-
   end
 }
