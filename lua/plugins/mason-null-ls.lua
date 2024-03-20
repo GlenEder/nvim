@@ -20,8 +20,8 @@ return {
       },
     })
 
-    -- setup formatting keybind
-    vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format, {})
+    -- setup formatting keybind, hint: "fix shit"
+    vim.keymap.set('n', '<leader>fs', vim.lsp.buf.format, {})
   end,
 
 

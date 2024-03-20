@@ -18,6 +18,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "bashls",
+        "marksman",
       },
       -- define default handler setup method so that the lsps load
       handlers = {
