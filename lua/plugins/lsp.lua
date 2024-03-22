@@ -17,6 +17,7 @@ return {
       -- list of lsps to have intstalled by default
       ensure_installed = {
         "lua_ls",
+        "gopls",
         "bashls",
         "marksman",
       },

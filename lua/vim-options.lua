@@ -28,3 +28,4 @@ vim.keymap.set('n', '<leader>g', vim.lsp.buf.declaration, {})
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>ne', vim.diagnostic.goto_next, {})
 vim.keymap.set('n', '<leader>pe', vim.diagnostic.goto_prev, {})
+
