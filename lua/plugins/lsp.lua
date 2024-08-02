@@ -17,8 +17,8 @@ return {
       -- list of lsps to have intstalled by default
       ensure_installed = {
         "lua_ls",
-        "bashls",
         "marksman",
+        "pylsp",
       },
       -- define default handler setup method so that the lsps load
       handlers = {

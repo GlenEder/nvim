@@ -28,3 +28,9 @@ vim.keymap.set('n', '<leader>g', vim.lsp.buf.declaration, {})
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>ne', vim.diagnostic.goto_next, {})
 vim.keymap.set('n', '<leader>pe', vim.diagnostic.goto_prev, {})
+
+-- Fold Line settings
+vim.g.fold_line_char_open_start = "╭"
+vim.g.fold_line_char_open_end = "╰"
+vim.cmd("set foldmethod=indent")
+vim.cmd("set nofoldenable")
