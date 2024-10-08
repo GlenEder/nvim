@@ -34,3 +34,6 @@ vim.g.fold_line_char_open_start = "╭"
 vim.g.fold_line_char_open_end = "╰"
 vim.cmd("set foldmethod=indent")
 vim.cmd("set nofoldenable")
+
+-- copy file path to clipboard
+vim.keymap.set("n", "<leader>cp", "<Cmd>let @*=expand('%:p')<CR>")
