@@ -13,7 +13,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- define vim settings
-require("vim-options")
+require("config.options")
+require("config.keymaps")
 
 -- load lazy.vim plugins
 require("lazy").setup("plugins")
+
+-- setup lsp servers
+require("config.lsp")
