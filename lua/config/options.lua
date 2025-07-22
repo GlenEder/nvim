@@ -7,5 +7,15 @@ vim.opt.relativenumber = true
 vim.opt.wrap = false
 -- This is macOS and Windows specific, for linux -> unnamedplus
 vim.opt.clipboard = "unnamed"
-vim.lsp.set_log_level("debug")
+
+
+-- LSP settings
+--vim.lsp.set_log_level("debug")
+vim.opt.completeopt = {
+  "menu",
+  "menuone",
+  "noselect",
+  "popup",
+}
+
 

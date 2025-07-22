@@ -1,7 +1,20 @@
--- In your init.lua or lua/config/lsp.lua
-require('lspconfig').clangd.setup({
-  cmd = { "clangd" },
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+return {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--suggest-missing-includes",
+    "--pch-storage=memory",
+    "--clang-tidy",
+    "--completion-style=detailed",
+  },
+  filetypes = {
+    "c",
+    "cpp",
+    "objc",
+    "objcpp",
+    "cuda",
+    "proto",
+  },
   root_markers = {
     '.clangd',
     '.clang-tidy',
@@ -12,4 +25,4 @@ require('lspconfig').clangd.setup({
     '.git'
   },
   single_file_support = true,
-})
+}

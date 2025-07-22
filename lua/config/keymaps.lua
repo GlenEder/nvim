@@ -8,8 +8,10 @@ vim.keymap.set("n", "<up>", "<C-w>k")
 vim.keymap.set("n", "<right>", "<C-w>l")
 vim.keymap.set("n", "<leader>tt", "<Cmd>terminal<Cr>")
 vim.keymap.set("n", "<leader>st", "<Cmd>vs | terminal<Cr>")
+vim.keymap.set("n", "<leader>fc", "gg=G")
 
 -- Lsp settings
+vim.keymap.set("i", "<C-space>", vim.lsp.completion.get, { desc = "trigger autocompletion" })
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, {})
 vim.keymap.set('n', '<leader>g', vim.lsp.buf.declaration, {})
