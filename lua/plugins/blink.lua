@@ -3,6 +3,7 @@ return
     'saghen/blink.cmp',
     event = 'LspAttach',
     version = '1.*',
+    dependencies = { "fang2hou/blink-copilot" },
     opts = {
       keymap = {
         preset = 'none',
@@ -21,7 +22,15 @@ return
         }
       },
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot' },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-copilot",
+            score_offset = 100,
+            async = true,
+          },
+        },
       },
       fuzzy = { implementation = "prefer_rust_with_warning" }
     },
