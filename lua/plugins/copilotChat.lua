@@ -6,7 +6,10 @@ return {
     },
     build = "make tiktoken",
     opts = {
-      -- See Configuration section for options
+      window = {
+        layout = 'float',
+        relative = 'editor',
+      },
     },
     -- See Commands section for default commands if you want to lazy load on them
   },

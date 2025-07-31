@@ -30,4 +30,4 @@ vim.keymap.set("n", "<leader>cp", "<Cmd>let @*=expand('%:p')<CR>")
 vim.keymap.set("n", "<leader>cs", "<CMD>noh<CR>")
 
 -- copilot chat
-vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>");
+vim.keymap.set("n", "<leader>cc", "<CMD>CopilotChatToggle<CR>");
