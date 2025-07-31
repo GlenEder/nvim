@@ -13,7 +13,9 @@ vim.keymap.set("n", "<leader>fc", "gg=G")
 -- Lsp settings
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, {})
-vim.keymap.set('n', '<leader>g', vim.lsp.buf.declaration, {})
+vim.keymap.set('n', '<leader>gd', vim.lsp.buf.declaration, {})
+vim.keymap.set('n', '<leader>fr', function() require('telescope.builtin').lsp_references() end,
+  { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>ne', vim.diagnostic.goto_next, {})
 vim.keymap.set('n', '<leader>pe', vim.diagnostic.goto_prev, {})
@@ -23,3 +25,9 @@ vim.keymap.set('i', '<C-Enter>', 'copilot#Accept("\\<CR>")', { silent = true, ex
 
 -- copy file path to clipboard
 vim.keymap.set("n", "<leader>cp", "<Cmd>let @*=expand('%:p')<CR>")
+
+-- turn off vim search highlight
+vim.keymap.set("n", "<leader>cs", "<CMD>noh<CR>")
+
+-- copilot chat
+vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>");
