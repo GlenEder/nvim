@@ -2,12 +2,11 @@ vim.g.mapleader = " "
 -- Move to window using the arrow keys and leader l/r
 vim.keymap.set("n", "<leader>l", "<C-w>h")
 vim.keymap.set("n", "<leader>r", "<C-w>l")
+vim.keymap.set("n", "<leader>s", "<C-w>x")
 vim.keymap.set("n", "<left>", "<C-w>h")
 vim.keymap.set("n", "<down>", "<C-w>j")
 vim.keymap.set("n", "<up>", "<C-w>k")
 vim.keymap.set("n", "<right>", "<C-w>l")
-vim.keymap.set("n", "<leader>tt", "<Cmd>terminal<Cr>")
-vim.keymap.set("n", "<leader>st", "<Cmd>vs | terminal<Cr>")
 vim.keymap.set("n", "<leader>fc", "gg=G")
 
 -- Lsp settings
