@@ -1,8 +1,7 @@
 vim.lsp.enable({
-  "harper_ls",
-  "lua_ls",
   "bashls",
   "clangd",
+  "lua_ls",
 })
 
 vim.diagnostic.config({
@@ -46,3 +45,23 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+
+-- Toggle HarperLS LSP
+function ToggleHarperLS()
+  local clients = vim.lsp.get_active_clients({ name = "harper_ls" })
+  if #clients > 0 then
+    for _, client in ipairs(clients) do
+      vim.lsp.stop_client(client.id)
+    end
+    print("HarperLS stopped")
+  else
+    vim.lsp.enable({
+      "harper_ls",
+    })
+    vim.cmd("edit") -- reload buffer to attach LSP
+    print("HarperLS started")
+  end
+end
+
+vim.keymap.set('n', '<leader>sc', ToggleHarperLS, { desc = "Toggle HarperLS" })

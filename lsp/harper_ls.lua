@@ -3,7 +3,6 @@ return {
   root_markers = {
     ".git",
   },
-
   settings = {
     userDictPath = "~/.config/nvim/spellcheck/user_dict.txt",
     workspaceDictPath = "",
@@ -12,7 +11,7 @@ return {
       SpellCheck = true,
       SpelledNumbers = false,
       AnA = true,
-      SentenceCapitalization = true,
+      SentenceCapitalization = false,
       UnclosedQuotes = true,
       WrongQuotes = false,
       LongSentences = true,

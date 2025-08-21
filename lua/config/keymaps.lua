@@ -25,8 +25,5 @@ vim.keymap.set('i', '<C-Enter>', 'copilot#Accept("\\<CR>")', { silent = true, ex
 -- copy file path to clipboard
 vim.keymap.set("n", "<leader>cp", "<Cmd>let @*=expand('%:p')<CR>")
 
--- turn off vim search highlight
-vim.keymap.set("n", "<leader>cs", "<CMD>noh<CR>")
-
--- copilot chat
-vim.keymap.set("n", "<leader>cc", "<CMD>CopilotChatToggle<CR>");
+vim.keymap.set("n", "<leader>cs", "<CMD>noh<CR>", { desc = "Clear search highlighting" })
+vim.keymap.set("n", "<leader>cc", "<CMD>CopilotChatToggle<CR>", { desc = "Toggle Copilot chat window" });
