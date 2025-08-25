@@ -2,6 +2,7 @@ vim.lsp.enable({
   "bashls",
   "clangd",
   "lua_ls",
+  "vtsls",
 })
 
 vim.diagnostic.config({
