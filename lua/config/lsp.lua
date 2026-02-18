@@ -3,6 +3,7 @@ vim.lsp.enable({
   "clangd",
   "lua_ls",
   "vtsls",
+  "bicep_ls",
 })
 
 vim.diagnostic.config({

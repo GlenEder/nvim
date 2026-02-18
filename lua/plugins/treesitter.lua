@@ -12,6 +12,7 @@ return {
         "cpp",
         "c",
         "cmake",
+        "bicep",
       },
       highlight = { enable = true },
       indent = { enable = true },
