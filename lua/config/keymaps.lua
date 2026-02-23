@@ -25,14 +25,3 @@ vim.keymap.set("n", "<leader>cp", "<Cmd>let @*=expand('%:p')<CR>", { desc = "Cop
 vim.keymap.set("n", "<leader>cs", "<CMD>noh<CR>", { desc = "Clear search highlighting" })
 vim.keymap.set('n', '<leader>va', 'ggVG', { desc = 'Select entire file' })
 
--- Github Copilot commands
-vim.keymap.set("n", "<leader>cc", "<CMD>CopilotChatToggle<CR>", { desc = "Toggle Copilot chat window" })
-vim.keymap.set("v", "<leader>cc", "<CMD>CopilotChatExplain<CR>", { desc = "Explain highlighted code" })
-vim.keymap.set("v", "<leader>cr", "<CMD>CopilotChatReview<CR>", { desc = "Review highlighted code" })
-vim.keymap.set("v", "<leader>cf", "<CMD>CopilotChatFix<CR>", { desc = "Fix highlighted code" })
-vim.keymap.set("v", "<leader>cd", "<CMD>CopilotChatDocs<CR>", { desc = "Document highlighted code" })
-vim.keymap.set("v", "<leader>ct", "<CMD>CopilotChatTests<CR>", { desc = "Create tests for highlighted code" })
-
-
--- Change copilot keymap (has been moved to lsp's suggestion window)
-vim.keymap.set('i', '<C-Enter>', 'copilot#Accept("\\<CR>")', { silent = true, expr = true, replace_keycodes = false })

@@ -74,12 +74,12 @@
             --
             -- likely ill add a mode check and assert on required visual mode
             -- so just prepare for it now
-			vim.keymap.set("v", "<leader>99", function()
+			vim.keymap.set("v", "<leader>cc", function()
 				_99.visual()
 			end)
 
             --- if you have a request you dont want to make any changes, just cancel it
-			vim.keymap.set("v", "<leader>98", function()
+			vim.keymap.set("v", "<leader>cs", function()
 				_99.stop_all_requests()
 			end)
 		end,
