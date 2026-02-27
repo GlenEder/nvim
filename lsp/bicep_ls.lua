@@ -1,6 +1,6 @@
 return {
 	cmd = {
-	"bicep-lsp",
+    "bicep-lsp",
 	},
 	filetypes = {
     "bicep"

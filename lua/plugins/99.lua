@@ -78,9 +78,14 @@
 				_99.visual()
 			end)
 
-            --- if you have a request you dont want to make any changes, just cancel it
-			vim.keymap.set("v", "<leader>cs", function()
+            --- if you have a request you dont want to make any changes, just 'cancel it'
+			vim.keymap.set("v", "<leader>ci", function()
 				_99.stop_all_requests()
+			end)
+
+      -- Search mode when in normal editor mode 
+			vim.keymap.set("n", "<leader>cc", function()
+				_99.search()
 			end)
 		end,
 	}

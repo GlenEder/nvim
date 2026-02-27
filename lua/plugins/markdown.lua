@@ -1,17 +1,12 @@
 return {
-  "iamcco/markdown-preview.nvim",
-  cmd = {
-    "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop"
-  },
-  ft = { "markdown" },
-  build = function()
-    vim.fn["mkdp#util#install"]()
-  end,
+  "selimacerbas/markdown-preview.nvim",
+  dependencies = { "selimacerbas/live-server.nvim" },
   config = function()
-    vim.g.mkdp_auto_start = 0
-    vim.g.mkdp_auto_close = 1
-    vim.g.mkdp_refresh_slow = 0
-    vim.g.mkdp_open_to_the_world = 1
-    vim.g.mkdp_theme = "light"
-  end,
+    require("markdown_preview").setup({
+      -- all optional; sane defaults shown
+      port = 8421,
+      open_browser = true,
+      debounce_ms = 300,
+    })
+  end
 }
