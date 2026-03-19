@@ -8,7 +8,6 @@ return {
     require("dwight").setup({
       backend = "opencode",     -- or "codex", "gemini", "opencode"
       api_key = "$OPENCODE_API_KEY", 
-      opencode_bin = "/opt/homebrew/bin/opencode",
     })
   end,
 }
