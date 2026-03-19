@@ -27,3 +27,7 @@ vim.keymap.set("n", "<leader>cp", "<Cmd>let @*=expand('%:p')<CR>", { desc = "Cop
 vim.keymap.set("n", "<leader>cs", "<CMD>noh<CR>", { desc = "Clear search highlighting" })
 vim.keymap.set('n', '<leader>va', 'ggVG', { desc = 'Select entire file' })
 
+-- Dwight AI 
+vim.keymap.set("v", "<leader>cc", ":DwightAgent<CR>", { desc = "DwightAgent on selection" })
+vim.keymap.set("n", "<leader>cc", ":DwightAgent<CR>", { desc = "DwightAgent prompt" })
+

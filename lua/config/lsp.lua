@@ -1,7 +1,7 @@
 vim.lsp.enable({
   "bashls",
   "clangd",
-  "lua_ls",
+  --  "lua_ls",
   "vtsls",
   "bicep_ls",
 })
