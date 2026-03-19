@@ -1,4 +1,4 @@
-return {
+ return {
   "otaleghani/dwight.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -7,7 +7,7 @@ return {
   config = function()
     require("dwight").setup({
       backend = "opencode",     -- or "codex", "gemini", "opencode"
-      api_key = "$OPENCODE_API_KEY", 
+      -- api_key = "$OPENCODE_API_KEY", 
     })
   end,
 }
