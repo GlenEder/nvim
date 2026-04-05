@@ -9,14 +9,11 @@ vim.keymap.set("n", "<left>", "<C-w>h")
 vim.keymap.set("n", "<down>", "<C-w>j")
 vim.keymap.set("n", "<up>", "<C-w>k")
 vim.keymap.set("n", "<right>", "<C-w>l")
-vim.keymap.set("n", "<leader>fc", "gg=G")
 
 -- Lsp settings
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', '<leader>vd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', '<leader>gd', vim.lsp.buf.declaration, {})
-vim.keymap.set('n', '<leader>fr', function() require('telescope.builtin').lsp_references() end,
-  { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>ne', vim.diagnostic.goto_next, {})
 vim.keymap.set('n', '<leader>pe', vim.diagnostic.goto_prev, {})

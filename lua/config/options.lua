@@ -1,3 +1,7 @@
+--[===[
+-- This file contains neovim configurations of the built in system.
+-- No plugin or lsp configurations are handled here
+--]===]
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -9,13 +13,6 @@ vim.opt.wrap = false
 vim.opt.clipboard = "unnamed"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.confirm = true
 
 
--- LSP settings
---vim.lsp.set_log_level("debug")
-vim.opt.completeopt = {
-  "menu",
-  "menuone",
-  "noselect",
-  "popup",
-}

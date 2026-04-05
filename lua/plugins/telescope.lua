@@ -1,28 +1,19 @@
-return {
+vim.pack.add{
   {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
-    dependencies = {
-      'nvim-lua/plenary.nvim'
-    },
-    config = function()
-      local builtin = require("telescope.builtin")
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-    end
+    name = 'telescope',
+    src = 'https://github.com/nvim-telescope/telescope.nvim',
   },
-  {
-    'nvim-telescope/telescope-ui-select.nvim',
-    config = function()
-      require("telescope").setup {
-        extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown {}
-          }
-        }
-      }
-      require("telescope").load_extension("ui-select")
-    end
-  }
-
+  -- dependencies
+  'https://github.com/nvim-lua/plenary.nvim',
+  -- optional but recommended
+  { 
+    src = 'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
+    build = 'make' 
+  },
 }
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
