@@ -1,11 +1,14 @@
-return {
-  'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
-  config = function()
-    require("lualine").setup({
-      options = {
-        theme = "dracula"
-      }
-    })
-  end
+vim.pack.add{
+  {
+    name = 'lualine',
+    src = 'https://github.com/nvim-lualine/lualine.nvim',
+    opt = {
+      theme = 'dracula',
+    }
+  },
+  -- dependencies 
+  'https://github.com/nvim-tree/nvim-web-devicons',
 }
+
+require('lualine').setup()
+

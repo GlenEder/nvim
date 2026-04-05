@@ -1,25 +1,15 @@
-return {
-  "nvim-neo-tree/neo-tree.nvim",
-  branch = "v3.x",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    "MunifTanjim/nui.nvim",
+vim.pack.add({
+  {
+    name = 'neo-tree',
+    src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
+    version = vim.version.range('3')
   },
-  config = function()
-    require("neo-tree").setup({
-      filesystem = {
-        filtered_items = {
-          visible = true,
-          hide_dotfiles = false,
-        },
-        follow_current_file = {
-          enabled = true, -- This will find and focus the file in the active buffer every time
-          leave_dirs_open = true, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
-        },
-      },
-    })
-    -- setup key binds for neotree
-    vim.keymap.set('n', '<leader>nt', '<Cmd>Neotree toggle<Cr>')
-  end
-}
+  -- dependencies
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/MunifTanjim/nui.nvim',
+  'https://github.com/nvim-tree/nvim-web-devicons',
+})
+
+vim.keymap.set('n', '<leader>nt', '<Cmd>Neotree toggle<Cr>')
+
+
