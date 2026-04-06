@@ -10,7 +10,7 @@ vim.lsp.enable({
 --vim.lsp.set_log_level('debug')
 vim.opt.autocomplete = true
 vim.opt.signcolumn = 'yes:1'
-vim.opt.complete = 't'
+vim.opt.complete = 'o'
 vim.opt.completeopt = {
   'fuzzy',
   'menu',
