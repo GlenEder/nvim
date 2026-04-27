@@ -14,6 +14,9 @@ require('plugins.gitblame')
 require('plugins.fidget')
 require('plugins.lualine')
 
+-- markdown viewer
+require('plugins.markdown-preview')
+
 -- file tree viewer
 require('plugins.neo-tree')
 
