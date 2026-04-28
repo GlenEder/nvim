@@ -23,6 +23,9 @@ require('plugins.neo-tree')
 -- fuzzy finder 
 require('plugins.telescope')
 
+-- terminal popup
+require('plugins.toggle-term')
+
 -- lsp servers
 require('plugins.nvim-lspconfig')
 require('plugins.mason')
