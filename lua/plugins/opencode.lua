@@ -1,9 +1,9 @@
-vim.pack.add{
+vim.pack.add {
   {
     name = 'opencode',
     src = 'https://github.com/sudo-tee/opencode.nvim',
   },
-  -- dependices 
+  -- dependices
   'https://github.com/nvim-lua/plenary.nvim',
   {
     src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim',
@@ -18,12 +18,18 @@ vim.pack.add{
 }
 
 require('opencode').setup({
-   default_global_keymaps = false, -- If false, disables all default global keymaps
-   keymap = {
-     editor = {
-       ['<leader>oc'] = { 'toggle' },
-       ['<leader>cc'] = { 'open_input' },
-       ['<leader>ck'] = { 'quick_chat', mode = { 'n', 'x' } }, -- Open quick chat input with selection context in visual mode or current line context in normal mode
-     },
-   },
+  default_global_keymaps = false,  -- If false, disables all default global keymaps
+  keymap = {
+    editor = {
+      ['<leader>oc'] = { 'toggle' },
+      ['<leader>cc'] = { 'open_input' },
+      ['<leader>ck'] = { 'quick_chat', mode = { 'n', 'x' } },  -- Open quick chat input with selection context in visual mode or current line context in normal mode
+    },
+  },
+  hooks = {
+    on_done_thinking = function()
+      vim.fn.system('paplay /usr/share/sounds/freedesktop/stereo/complete.oga &')
+      vim.notify("opencode done", vim.log.levels.INFO)
+    end,
+  },
 })
