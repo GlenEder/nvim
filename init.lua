@@ -17,6 +17,9 @@ require('plugins.lualine')
 -- markdown viewer
 require('plugins.markdown-preview')
 
+-- git diff viewer 
+require('plugins.diff-view')
+
 -- file tree viewer
 require('plugins.neo-tree')
 
