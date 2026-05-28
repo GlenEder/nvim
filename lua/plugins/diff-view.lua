@@ -8,6 +8,9 @@ vim.pack.add{
   'https://github.com/nvim-tree/nvim-web-devicons',
 }
 
+-- set diff for deleted lines to empty 
+vim.opt.fillchars:append { diff = ' ' }
+
 -- keymaps for diff views 
 vim.keymap.set('n', '<leader>dvo', '<Cmd>DiffviewOpen<Cr>')
 vim.keymap.set('n', '<leader>dvc', '<Cmd>DiffviewClose<Cr>')

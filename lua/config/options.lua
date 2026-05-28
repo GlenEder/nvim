@@ -15,4 +15,14 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.confirm = true
 
-
+vim.o.autoread = true
+vim.o.updatetime = 1000
+vim.api.nvim_create_autocmd({ 
+	"CursorHold", "CursorHoldI" }, 
+	{
+		pattern = "*",
+		callback = function()
+		vim.cmd("checktime")
+		vim.fn.feedkeys("lh", "n")
+		end,
+})
