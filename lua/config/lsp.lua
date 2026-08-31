@@ -3,7 +3,9 @@ vim.lsp.enable({
   'clangd',
   'lua_ls',
   'vtsls',
+  'eslint',
   'bicep_ls',
+  'terraform_ls',
 })
 
 -- LSP settings

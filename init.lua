@@ -10,8 +10,10 @@ order matters here as load order handles dependencies
 
 -- editor theme / info display
 require('plugins.catppuccin')
-require('plugins.gitblame')
-require('plugins.fidget')
+require('plugins.gitsigns')
+
+--that is just crazy 
+ require('plugins.fidget')
 require('plugins.lualine')
 require('plugins.blink')
 
@@ -33,4 +35,4 @@ require('plugins.mason')
 require('config.lsp') -- load the lsp servers
 
 -- Opencode AI
-require('plugins.opencode')
+-- require('plugins.opencode')

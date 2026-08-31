@@ -13,3 +13,13 @@ vim.pack.add({
 vim.keymap.set('n', '<leader>nt', '<Cmd>Neotree toggle<Cr>')
 
 
+require('neo-tree').setup({
+  filesystem = {
+    bind_to_cwd = true,
+    follow_current_file = {
+      enabled = true,
+      leave_dirs_open = true,
+    },
+    use_libuv_file_watcher = true,
+  },
+})
