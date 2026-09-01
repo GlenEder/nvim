@@ -1,3 +1,6 @@
+-- ESLint lints only (repo config drives the rules); leave formatting to vtsls
+vim.lsp.config('eslint', { settings = { format = false } })
+
 vim.lsp.enable({
   'bashls',
   'clangd',
@@ -63,6 +66,30 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- On save of JS/TS-ish files: apply the repo's ESLint rules.
+-- The eslint client only attaches when the repo has an ESLint config, so
+-- these are no-ops elsewhere.
+local js_ts_patterns = { '*.ts', '*.tsx', '*.js', '*.jsx', '*.mjs', '*.cjs', '*.mts', '*.cts' }
+
+-- auto-fix (the repo's auto-fixable rules) before writing
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = js_ts_patterns,
+  callback = function(args)
+    for _, client in ipairs(vim.lsp.get_clients({ bufnr = args.buf, name = 'eslint' })) do
+      if client:supports_method('workspace/executeCommand') then
+        client:request_sync('workspace/executeCommand', {
+          command = 'eslint.applyAllFixes',
+          arguments = {
+            { uri = vim.uri_from_bufnr(args.buf), version = vim.lsp.util.buf_versions[args.buf] },
+          },
+        })
+      end
+    end
+  end,
+})
+
+-- No explicit re-lint needed on save: the eslint server re-lints on
+-- didChange and via willSaveWaitUntil on save (it has no "textDocument/lint" method).
 
 -- Toggle HarperLS LSP
 function ToggleHarperLS()
