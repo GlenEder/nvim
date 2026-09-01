@@ -16,6 +16,10 @@
       "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
       "src": "https://github.com/catppuccin/nvim"
     },
+    "codediff": {
+      "rev": "0abad4aa022a34fab0deb90dd9379d5de1c9c329",
+      "src": "https://github.com/esmuellert/codediff.nvim"
+    },
     "fidget": {
       "rev": "889e2e96edef4e144965571d46f7a77bcc4d0ddf",
       "src": "https://github.com/j-hui/fidget.nvim"

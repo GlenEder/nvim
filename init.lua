@@ -10,10 +10,7 @@ order matters here as load order handles dependencies
 
 -- editor theme / info display
 require('plugins.catppuccin')
-require('plugins.gitsigns')
-
---that is just crazy 
- require('plugins.fidget')
+require('plugins.fidget')
 require('plugins.lualine')
 require('plugins.blink')
 
@@ -33,6 +30,10 @@ require('plugins.toggle-term')
 require('plugins.nvim-lspconfig')
 require('plugins.mason')
 require('config.lsp') -- load the lsp servers
+
+-- git shit
+require('plugins.gitsigns')
+require('plugins.codediff')
 
 -- Opencode AI
 -- require('plugins.opencode')
